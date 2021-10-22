@@ -4,10 +4,12 @@
 }
 
 .maxWidthWrapper {
+  display: inline-block;
 }
 
 .header {
   padding-bottom: 64px;
+  width: 65%;
 }
 
 .title {
@@ -24,7 +26,39 @@
 }
 
 .characterWrapper {
+  max-height: 500px;
+  width: 35%;
+  top: 120px;
+  bottom: 0;
+  position: fixed;
+  display: inline-block;
 }
 
-.controlColumn {
+.perspectiveBar {
+  height: 40%;
+  width: 100%;
+  background-color: hsl(195deg, 20%, 86%);
+  position: fixed;
+}
+
+@media screen and (max-width: 714px) {
+  .controlColumn {
+    white-space: nowrap;
+    position: relative;
+    top: 100px;
+    bottom: 0;
+    margin-top: auto;
+    margin-bottom: auto;
+  }
+  .characterWrapper {
+    z-index: -1;
+    top: 340px;
+  }
+  .characterEditor {
+    overflow: hidden;
+    position: fixed;
+  }
+  .controlColumn {
+    overflow-x: scroll;
+  }
 }
